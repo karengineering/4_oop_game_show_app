@@ -30,24 +30,18 @@ the gameboard to display the `liveHeart.png` image.
     */
     startGame() {
         let chars = document.querySelector('#phrase ul');
-        // console.log(chars);
         chars.innerHTML = '';
-        // console.log(chars.innerHTML);
-        // let c = document.querySelector('#phrase');
-        // console.log(c);
 
         let qwerty = document.querySelectorAll('#qwerty button');
-        // console.log(qwerty);
-        // console.log(Array.from(qwerty));
-        // Array.from(qwerty).forEach(k => {
-        [...qwerty].forEach(k => {
-            k.disabled = false;
-            k.className = 'key';
+
+        [...qwerty].forEach(key => {
+            key.disabled = false;
+            key.className = 'key';
         });
 
         let tries = document.querySelectorAll('.tries img');
-        tries.forEach(t => {
-            t.src = 'images/liveHeart.png';
+        tries.forEach(life => {
+            life.src = 'images/liveHeart.png';
         });
 
         let overlay = document.querySelector('#overlay');
